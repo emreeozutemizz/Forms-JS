@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Form & JS</title>
+    <style>
+        body{
+            background-color: rgb(255, 237, 80);
+        }
+        #kayitformu{
+            width: 300px;
+            border: 1px solid  white;
+            border-radius: 5px;
+            padding: 5px;
+            box-shadow: 5px 5px 10px 0px white;;
+        }
+        #container{
+            margin-top: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #gonder{
+            background-color: rgb(255, 237, 80);
+            color: rgb(0, 0, 0);
+            border-color: white;
+            border-radius: 6px;
+        }
+        #gonder:hover{
+            background-color: rgb(235, 212, 8);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form id="kayitformu" name="kayitformu" action="aaa.php" method="post">
+        <table>
+            <tr>
+                <th  colspan="3">Kayıt Formu</th>
+            </tr>
+            <tr>
+                <td>Kullanıcı Adı</td>
+                <td>:</td>
+                <td><input type="text" id="kullaniciadi" name="kullaniciadi"></td>
+            </tr>
+            <tr>
+                <td>Şifre</td>
+                <td>:</td>
+                <td><input type="password" id="sifre" name="sifre"></td>
+            </tr>
+            <tr>
+                <td>Şifre Tekrar</td>
+                <td>:</td>
+                <td><input type="password" id="sifretekrar" name="sifretekrar"></td>
+            </tr>
+            <tr>
+                <td>E-mail</td>
+                <td>:</td>
+                <td><input type="text" id="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Cinsiyet</td>
+                <td>:</td>
+                <td>
+                    <input type="radio" id="cinsiyet1" name="cinsiyet" value="Erkek">Erkek
+                    <input type="radio" id="cinsiyet2" name="cinsiyet" value="Kadın">Kadın
+                </td>
+            </tr>
+            <tr>
+                <td>Hobiler</td>
+                <td>:</td>
+                <td>
+                    <input type="checkbox" id="hobi" name="hobi" value="Alışveriş">Alışveriş
+                    <input type="checkbox" id="hobi1" name="hobi" value="Futbol">Futbol
+                    <input type="checkbox" id="hobi2" name="hobi" value="Gezmek">Gezmek
+                </td>
+            </tr>
+            <tr>
+                <td>Not</td>
+                <td>:</td>
+                <td><textarea name="not" id="not"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;"><input id="gonder" type="button" value="Gönder" ></td>
+            </tr>
+        </table>
+
+    </form>
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
